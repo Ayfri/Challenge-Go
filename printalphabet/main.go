@@ -5,8 +5,7 @@ import (
 )
 
 func main() {
-	for char := 'a'; char <= 'z'; char++ {
-		z01.PrintRune(char)
+	for char := 97; char <= 122; char++ {
+		z01.PrintRune(rune(char))
 	}
-	println("\n")
 }
