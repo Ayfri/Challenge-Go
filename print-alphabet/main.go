@@ -1,11 +1,11 @@
 package main
 
 import (
-	"fmt"
+	"github.com/01-edu/z01"
 )
 
 func main() {
 	for char := 'a'; char <= 'z'; char++ {
-		fmt.Print( string(char))
+		z01.PrintRune(char)
 	}
 }
