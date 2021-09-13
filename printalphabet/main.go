@@ -8,4 +8,5 @@ func main() {
 	for char := 'a'; char <= 'z'; char++ {
 		z01.PrintRune(char)
 	}
+	println("\n")
 }
