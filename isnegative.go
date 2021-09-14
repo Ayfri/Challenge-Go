@@ -5,7 +5,7 @@ import (
 	"math"
 )
 
-func IsNegative(nb int) bool {
+func IsNegative(nb int) {
 	a := math.Abs(float64(nb))
 	if a == float64(nb) {
 		z01.PrintRune('T')
