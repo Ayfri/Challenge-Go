@@ -20,8 +20,6 @@ func PrintComb2() {
 					}
 				}
 			}
-
-			str += "\n"
 		}
 	}
 
