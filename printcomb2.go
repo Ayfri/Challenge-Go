@@ -7,7 +7,7 @@ func PrintComb2() {
 	str := ""
 
 	for i := rune('0'); i <= rune('9'); i++ {
-		for j := rune('0'); j <= rune('9'); j++{
+		for j := rune('0'); j <= rune('9'); j++ {
 			for k := rune('0'); k <= rune('9'); k++ {
 				for l := rune('0'); l <= rune('9'); l++ {
 					first := string(i) + string(j)
@@ -19,7 +19,7 @@ func PrintComb2() {
 			}
 		}
 	}
-	
+
 	str += "\n"
 
 	for _, char := range str {
