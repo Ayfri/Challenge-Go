@@ -13,7 +13,7 @@ func PrintComb2() {
 					first := string(i) + string(j)
 					second := string(k) + string(l)
 					if first != second {
-						str += first + ", " + second
+						str += first + second + ", "
 					}
 				}
 			}
