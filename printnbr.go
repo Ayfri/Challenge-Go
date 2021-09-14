@@ -10,8 +10,8 @@ func PrintNbr(nbr int) {
 		str += "-"
 	}
 
-	for i := 0; i <= 9; i++ {
-		str += string(rune(nbr))
+	for i := 0; i <= 18; i++ {
+		str += string(rune(nbr) + rune('0'))
 		nbr /= 10
 	}
 
