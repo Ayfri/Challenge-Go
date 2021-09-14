@@ -6,25 +6,30 @@ import (
 
 func PrintNbr(nbr int) {
 	str := ""
-	if nbr < 0 {
-		str += "-"
+	isNegative := nbr < 0
+	if isNegative {
+		nbr = -nbr
 	}
 
-	for i := nbr; i >= 10; i = i / 10 {
-		char := rune(getNextChar(i)) + rune('0')
-		z01.PrintRune(char)
-		z01.PrintRune('\n')
+	for i, remainder := nbr, 0; i != 0; i /= 10 {
+		remainder = i % 10
+		char := rune(remainder) + rune('0')
 		str += string(char)
 	}
+	if isNegative {
+		str += "-"
+	}
+	str = Reverse(str)
 
 	for _, char := range str {
 		z01.PrintRune(char)
 	}
 }
 
-func getNextChar(nbr int) int {
-	var i int
-	for i = nbr; i >= 10; i /= 10 {
+func Reverse(s string) string {
+	runes := []rune(s)
+	for i, j := 0, len(runes)-1; i < j; i, j = i+1, j-1 {
+		runes[i], runes[j] = runes[j], runes[i]
 	}
-	return i
+	return string(runes)
 }
