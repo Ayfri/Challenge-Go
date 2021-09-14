@@ -19,6 +19,8 @@ func PrintNbr(nbr int) {
 
 	if isNegative {
 		str += "-"
+	} else if nbr == 0 {
+		str = "0"
 	}
 
 	str = Reverse(str)
