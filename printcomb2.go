@@ -6,17 +6,22 @@ func PrintComb2() {
 	const zero = rune('0')
 	str := ""
 
-	for i := rune('0'); i <= rune('9'); i++ {
-		for j := rune('0'); j <= rune('9'); j++ {
-			for k := rune('0'); k <= rune('9'); k++ {
-				for l := rune('0'); l <= rune('9'); l++ {
+	for i := '0'; i <= '9'; i++ {
+		for j := '0'; j <= '9'; j++ {
+			for k := '0'; k <= '9'; k++ {
+				for l := '0'; l <= '9'; l++ {
 					first := string(i) + string(j)
 					second := string(k) + string(l)
+					if i > k || (i == k && j >= l) || first == "99" {
+						continue
+					}
 					if first != second {
 						str += first + " " + second + ", "
 					}
 				}
 			}
+
+			str += "\n"
 		}
 	}
 
