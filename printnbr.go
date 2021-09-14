@@ -8,7 +8,7 @@ func PrintNbr(nbr int) {
 	str := ""
 	for i := 0; i <= 9; i++ {
 		str += string(rune(nbr))
-		nbr /= 2
+		nbr >>= 1
 	}
 
 	for _, char := range str {
