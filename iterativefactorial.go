@@ -1,9 +1,9 @@
 package piscine
 
 func IterativeFactorial(nb int) int {
-	result := 0
+	result := 1
 	if nb > 1000000002 || nb < 1 {
-		return 0
+		return result
 	}
 
 	for i := nb; i > 0; i-- {
