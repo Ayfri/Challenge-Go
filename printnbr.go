@@ -10,7 +10,7 @@ func PrintNbr(nbr int) {
 		str += "-"
 	}
 
-	for i := 0; nbr > 0; i++ {
+	for i := 0; nbr <= 0; i++ {
 		char := rune(nbr) + rune('0')
 		z01.PrintRune(char)
 		z01.PrintRune('\n')
