@@ -16,7 +16,10 @@ func PrintComb2() {
 						continue
 					}
 					if first != second {
-						str += first + " " + second + ", "
+						str += first + " " + second
+						if first+second != "9899" {
+							str += ", "
+						}
 					}
 				}
 			}
