@@ -11,7 +11,7 @@ func PrintNbr(nbr int) {
 		nbr /= 2
 	}
 
-	for _, char := range str  {
+	for _, char := range str {
 		z01.PrintRune(char)
 	}
 }
