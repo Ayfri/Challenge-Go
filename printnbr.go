@@ -10,8 +10,12 @@ func PrintNbr(nbr int) {
 		str += "-"
 	}
 
-	for i := 0; i <= 18; i++ {
-		str += string(rune(nbr) + rune('0'))
+	for i := 0; nbr > 0; i++ {
+		char := rune(nbr) + rune('0')
+		z01.PrintRune(char)
+		z01.PrintRune('\n')
+		str += string(char)
+
 		nbr /= 10
 	}
 
