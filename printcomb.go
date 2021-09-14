@@ -14,6 +14,10 @@ func PrintComb() {
 				z01.PrintRune(i)
 				z01.PrintRune(j)
 				z01.PrintRune(k)
+				if string([]rune{i, j, k}) == "789" {
+					z01.PrintRune(newLine)
+					break
+				}
 				z01.PrintRune(rune(','))
 				z01.PrintRune(rune(' '))
 			}
