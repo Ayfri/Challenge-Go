@@ -4,16 +4,13 @@ import "github.com/01-edu/z01"
 
 func PrintComb() {
 	const newLine = rune('\n')
-	const zero = rune('0')
-	const nine = rune('9')
 
-	for i := zero; i <= nine; i++ {
-		for j := zero; j <= nine; j++ {
-			for k := zero; k <= nine; k++ {
-				if i == j || j == k || i == k {
+	for i := rune('0'); i <= rune('7'); i++ {
+		for j := rune('1'); j <= rune('8'); j++ {
+			for k := rune('1'); k <= rune('9'); k++ {
+				if i >= j || j >= k {
 					continue
 				}
-
 				z01.PrintRune(i)
 				z01.PrintRune(j)
 				z01.PrintRune(k)
