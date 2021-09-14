@@ -6,9 +6,13 @@ import (
 
 func PrintNbr(nbr int) {
 	str := ""
+	if nbr < 0 {
+		str += "-"
+	}
+
 	for i := 0; i <= 9; i++ {
 		str += string(rune(nbr))
-		nbr >>= 1
+		nbr /= 10
 	}
 
 	for _, char := range str {
