@@ -4,22 +4,27 @@ import (
 	"github.com/01-edu/z01"
 )
 
+
 func PrintNbr(nbr int) {
 	str := ""
 	if nbr < 0 {
 		str += "-"
 	}
 
-	for i := 0; nbr <= 0; i++ {
-		char := rune(nbr) + rune('0')
+	for i := nbr; i >= 10; i = i / 10 {
+		char := rune(getNextChar(i)) + rune('0')
 		z01.PrintRune(char)
 		z01.PrintRune('\n')
 		str += string(char)
-
-		nbr /= 10
 	}
 
 	for _, char := range str {
 		z01.PrintRune(char)
 	}
+}
+
+func getNextChar(nbr int) int {
+	var i int
+	for i = nbr; i >= 10; i /= 10 {}
+	return i
 }
