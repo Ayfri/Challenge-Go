@@ -1,14 +1,9 @@
 package tests
 
-import (
-	"math"
-
-	"github.com/01-edu/z01"
-)
+import "github.com/01-edu/z01"
 
 func IsNegative(nb int) {
-	a := math.Abs(float64(nb))
-	if a == float64(nb) {
+	if nb < 0 {
 		z01.PrintRune('T')
 	} else {
 		z01.PrintRune('F')
