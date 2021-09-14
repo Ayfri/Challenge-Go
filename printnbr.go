@@ -4,7 +4,6 @@ import (
 	"github.com/01-edu/z01"
 )
 
-
 func PrintNbr(nbr int) {
 	str := ""
 	if nbr < 0 {
@@ -25,6 +24,7 @@ func PrintNbr(nbr int) {
 
 func getNextChar(nbr int) int {
 	var i int
-	for i = nbr; i >= 10; i /= 10 {}
+	for i = nbr; i >= 10; i /= 10 {
+	}
 	return i
 }
