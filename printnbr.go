@@ -2,11 +2,16 @@ package piscine
 
 import (
 	"github.com/01-edu/z01"
-	"strconv"
 )
 
 func PrintNbr(nbr int) {
-	for _, char := range strconv.Itoa(nbr) {
+	str := ""
+	for i := 0; i <= 9; i++ {
+		str += string(rune(nbr))
+		nbr /= 2
+	}
+
+	for _, char := range str  {
 		z01.PrintRune(char)
 	}
 }
