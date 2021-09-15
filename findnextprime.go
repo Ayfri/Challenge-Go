@@ -15,7 +15,7 @@ func FindNextPrime(nb int) int {
 }
 
 func IsPrimeOptimized(nb int) bool {
-	for i := 3; i <= nb/2; i += 2 {
+	for i := 3; i * i < nb; i += 2 {
 		if nb%i == 0 {
 			return false
 		}
