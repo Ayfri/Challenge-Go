@@ -17,7 +17,6 @@ func IterativePower(nb, power int) int {
 		return 0
 	}
 
-
 	for i := 0; i < nb; i++ {
 		result *= power
 	}
