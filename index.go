@@ -6,7 +6,7 @@ func Index(s string, toFind string) int {
 		if index+len(toFind) > len(s) {
 			continue
 		}
-		if s[index:len(toFind)] == toFind {
+		if s[index:index+len(toFind)] == toFind {
 			return index
 		}
 	}
