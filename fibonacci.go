@@ -8,7 +8,7 @@ func Fibonacci(index int) int {
 	}
 
 	if index > 1 {
-		result = Fibonacci(index - 1) + Fibonacci(index - 2)
+		result = Fibonacci(index-1) + Fibonacci(index-2)
 	}
 
 	return result
