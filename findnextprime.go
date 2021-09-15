@@ -1,26 +1,32 @@
 package piscine
 
-func FindNextPrime(nb int) int {
-	if nb > 1 {
-		if IsPrimeOptimized(nb) {
-			return nb
+func isprime(nb int) bool {
+	if nb == 1 {
+		return false
+	}
+	if nb <= 0 {
+		return false
+	} else {
+		for i := 2; i*i <= nb; i++ {
+			if nb%i == 0 {
+				return false
+			}
 		}
-		for i := 0; i <= nb; i++ {
-			if IsPrimeOptimized(i) {
-				nb++
+		return true
+	}
+}
+
+func FindNextPrime(n int) int {
+	if n < 0 {
+		return 2
+	} else {
+		for i := 0; i <= n; i++ {
+			if isprime(n) == false {
+				n++
 			} else {
 				break
 			}
 		}
 	}
-	return 2
-}
-
-func IsPrimeOptimized(nb int) bool {
-	for i := 2; i*i <= nb; i++ {
-		if nb%i == 0 {
-			return false
-		}
-	}
-	return true
+	return n
 }
