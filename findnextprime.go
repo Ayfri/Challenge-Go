@@ -5,9 +5,11 @@ func FindNextPrime(nb int) int {
 		if IsPrimeOptimized(nb) {
 			return nb
 		}
-		for i := nb; i < (1 << 31); i++ {
+		for i := 0; i <= nb; i++ {
 			if IsPrimeOptimized(i) {
-				return i
+				nb++
+			} else {
+				break
 			}
 		}
 	}
