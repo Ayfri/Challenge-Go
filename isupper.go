@@ -4,8 +4,9 @@ func IsUpper(s string) bool {
 	containsLetter := false
 	for _, char := range s {
 		if !isLetter(char) {
-			containsLetter = true
 			continue
+		} else {
+			containsLetter = true
 		}
 		if char <= 'A' || char >= 'Z' {
 			return false
