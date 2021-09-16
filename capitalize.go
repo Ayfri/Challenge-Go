@@ -25,5 +25,5 @@ func isUpper(char rune) bool {
 }
 
 func isSpace(r rune) bool {
-	return !isLetter(r)
+	return !IsAlpha(string(r))
 }
