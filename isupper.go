@@ -5,7 +5,7 @@ func IsUpper(s string) bool {
 		if !isLetter(char) {
 			continue
 		}
-		if char >= 'A' && char <= 'Z' {
+		if char <= 'A' || char >= 'Z' {
 			return false
 		}
 	}
