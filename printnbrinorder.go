@@ -3,7 +3,7 @@ package piscine
 import "github.com/01-edu/z01"
 
 func PrintNbrInOrder(n int) {
-	result := Reverse(ConvertNbr(n))
+	result := Sort(ConvertNbr(n))
 	for _, char := range result {
 		z01.PrintRune(char)
 	}
@@ -22,9 +22,7 @@ func ConvertNbr(nbr int) string {
 		str += string(char)
 	}
 
-	if isNegative {
-		str += "-"
-	} else if nbr == 0 {
+	if nbr == 0 {
 		str = "0"
 	}
 
@@ -37,4 +35,16 @@ func Reverse(s string) string {
 		runes[i], runes[j] = runes[j], runes[i]
 	}
 	return string(runes)
+}
+
+func Sort(s string) string {
+	var result string
+	for i := '0'; i < '9'; i++ {
+		for _, char := range s {
+			if char == i {
+				result += string(char)
+			}
+		}
+	}
+	return result
 }
