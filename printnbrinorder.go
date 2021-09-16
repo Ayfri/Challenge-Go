@@ -26,20 +26,12 @@ func ConvertNbr(nbr int) string {
 		str = "0"
 	}
 
-	return Reverse(str)
-}
-
-func Reverse(s string) string {
-	runes := []rune(s)
-	for i, j := 0, len(runes)-1; i < j; i, j = i+1, j-1 {
-		runes[i], runes[j] = runes[j], runes[i]
-	}
-	return string(runes)
+	return str
 }
 
 func Sort(s string) string {
 	var result string
-	for i := '0'; i < '9'; i++ {
+	for i := '0'; i <= '9'; i++ {
 		for _, char := range s {
 			if char == i {
 				result += string(char)
