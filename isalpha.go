@@ -5,9 +5,13 @@ func IsAlpha(s string) bool {
 		return false
 	}
 	for _, char := range s {
-		if !isLetter(char) {
+		if !isLetter(char) && !isNumber(char) {
 			return false
 		}
 	}
 	return true
+}
+
+func isNumber(char rune) bool {
+	return char >= '0' && char <= '9'
 }
