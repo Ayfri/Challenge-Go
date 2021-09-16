@@ -2,7 +2,7 @@ package piscine
 
 func Capitalize(s string) string {
 	result := ""
-	isWord := false
+	isWord := true
 	difference := 'A' - 'a'
 	for _, char := range s {
 		if isLetter(char) {
