@@ -3,11 +3,15 @@ package piscine
 func ToUpper(s string) string {
 	result := ""
 	for _, char := range s {
+		var newChar rune
 		if isLower(char) {
-			result += string(char + 'A' - 'z')
+			newChar = char + 'A' - 'a'
+		} else {
+			newChar = char
 		}
+		result += string(newChar)
 	}
-	return s
+	return result
 }
 
 func isLower(char rune) bool {
