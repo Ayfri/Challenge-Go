@@ -4,7 +4,7 @@ func Capitalize(s string) string {
 	result := ""
 	isWord := false
 	for _, char := range s {
-		if isWord {
+		if isWord && isLetter(char) {
 			char += 'A' - 'a'
 		}
 		isWord = isSpace(char)
