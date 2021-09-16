@@ -5,17 +5,18 @@ func Capitalize(s string) string {
 	isWord := true
 	difference := 'A' - 'a'
 	for _, char := range s {
+		newChar := char
 		if isLetter(char) {
 			if isWord {
 				if !isUpper(char) {
-					char += difference
+					newChar += difference
 				}
 			} else if isUpper(char) {
-				char -= difference
+				newChar -= difference
 			}
 		}
 		isWord = isSpace(char)
-		result += string(char)
+		result += string(newChar)
 	}
 	return result
 }
