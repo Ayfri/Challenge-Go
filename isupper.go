@@ -1,18 +1,17 @@
 package piscine
 
 func IsUpper(s string) bool {
-	containsLetter := false
+	containsOtherChars := false
 	for _, char := range s {
 		if !isLetter(char) {
+			containsOtherChars = false
 			continue
-		} else {
-			containsLetter = true
 		}
 		if char <= 'A' || char >= 'Z' {
 			return false
 		}
 	}
-	if !containsLetter {
+	if containsOtherChars {
 		return false
 	}
 	return true
