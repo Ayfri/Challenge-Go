@@ -5,7 +5,7 @@ func IsPrintable(s string) bool {
 		return false
 	}
 	for _, char := range s {
-		if char == ' ' || char == '\t' || char == '\n' {
+		if char == '\t' || char == '\n' {
 			return false
 		}
 	}
