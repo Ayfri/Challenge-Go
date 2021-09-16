@@ -1,9 +1,10 @@
 package piscine
 
 func ToUpper(s string) string {
+	result := ""
 	for _, char := range s {
 		if isLower(char) {
-			char += 'A' - 'a'
+			result += string(char + 'A' - 'z')
 		}
 	}
 	return s
