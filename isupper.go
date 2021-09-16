@@ -11,7 +11,7 @@ func IsUpper(s string) bool {
 			return false
 		}
 	}
-	if containsOtherChars {
+	if !containsOtherChars {
 		return false
 	}
 	return true
