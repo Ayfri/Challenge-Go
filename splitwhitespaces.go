@@ -9,6 +9,7 @@ func SplitWhiteSpaces(s string) []string {
 			cache += string(char)
 		} else {
 			result = append(result, cache)
+			cache = ""
 		}
 	}
 
