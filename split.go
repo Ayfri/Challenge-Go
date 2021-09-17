@@ -8,7 +8,7 @@ func Split(s, sep string) []string {
 		if index+len(sep) >= len(s) {
 			continue
 		}
-		if sep == s[index:index+len(sep)] {
+		if sep != s[index:index+len(sep)] {
 			cache += string(char)
 		} else if len(cache) > 0 {
 			result = append(result, cache)
