@@ -1,7 +1,10 @@
 package piscine
 
-func isAlpha(a rune) bool {
-	return (a >= 'A' && a <= 'Z') || (a >= 'a' && a <= 'z') || (a >= '0' && a <= '9')
+func trust(a rune) bool {
+	if (a >= 'A' && a <= 'Z') || (a >= 'a' && a <= 'z') || (a >= '0' && a <= '9') {
+		return true
+	}
+	return false
 }
 
 func toUpper(s rune) rune {
@@ -19,26 +22,26 @@ func toLower(s rune) rune {
 }
 
 func Capitalize(s string) string {
-	runes := []rune(s)
-	length := 0
+	srunes := []rune(s)
+	len := 0
 	ok := true
 	for i := range s {
-		length = i
+		len = i
 	}
 
-	for i := 0; i < length; i++ {
-		if isAlpha(runes[i]) == true && ok {
-			if runes[i] >= 'a' && runes[i] <= 'z' {
-				runes[i] = toUpper(runes[i])
-			} else if runes[i] >= '0' && runes[i] <= '9' {
-				runes[i+1] = toLower(runes[i+1])
+	for i := 0; i < len; i++ {
+		if trust(srunes[i]) == true && ok {
+			if srunes[i] >= 'a' && srunes[i] <= 'z' {
+				srunes[i] = toUpper(srunes[i])
+			} else if srunes[i] >= '0' && srunes[i] <= '9' {
+				srunes[i+1] = toLower(srunes[i+1])
 			}
 			ok = false
-		} else if runes[i] >= 'A' && runes[i] <= 'Z' {
-			runes[i] = toLower(runes[i])
-		} else if isAlpha(runes[i]) == false {
+		} else if srunes[i] >= 'A' && srunes[i] <= 'Z' {
+			srunes[i] = toLower(srunes[i])
+		} else if trust(srunes[i]) == false {
 			ok = true
 		}
 	}
-	return string(runes)
+	return string(srunes)
 }
