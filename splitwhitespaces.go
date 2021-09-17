@@ -12,7 +12,9 @@ func SplitWhiteSpaces(s string) []string {
 			cache = ""
 		}
 	}
-	result = append(result, cache)
+	if len(cache) > 0 {
+		result = append(result, cache)
+	}
 
 	return result
 }
