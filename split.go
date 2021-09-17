@@ -5,6 +5,9 @@ func Split(s, sep string) []string {
 	var cache string
 
 	for index, char := range s {
+		if index+len(sep) >= len(s) {
+			continue
+		}
 		if sep == s[index:index+len(sep)] {
 			cache += string(char)
 		} else if len(cache) > 0 {
