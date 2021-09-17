@@ -25,7 +25,7 @@ func TrimAtoi(s string) int {
 	if isNegative {
 		result = -result
 	}
-	
+
 	return result
 }
 
