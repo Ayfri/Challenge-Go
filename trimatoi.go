@@ -5,7 +5,6 @@ func TrimAtoi(s string) int {
 	str := ""
 	isNegative := false
 	for index, char := range s {
-		println("char[", index, "] == ", char)
 		if index > 0 && s[index-1] == '-' && len(str) == 0 {
 			isNegative = true
 		}
