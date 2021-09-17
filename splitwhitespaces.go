@@ -5,10 +5,10 @@ func SplitWhiteSpaces(s string) []string {
 	var cache string
 
 	for _, char := range s {
-		if IsPrintable(string(char)) || char == ' ' {
-			cache += string(char)
-		} else {
+		if IsPrintable(string(char)) && char != ' ' {
 			result = append(result, cache)
+		} else {
+			cache += string(char)
 		}
 	}
 
