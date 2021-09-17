@@ -3,7 +3,7 @@ package piscine
 func SplitWhiteSpaces(s string) []string {
 	var result []string
 	var cache string
-	
+
 	for _, char := range s {
 		if IsPrintable(string(char)) {
 			cache += string(char)
