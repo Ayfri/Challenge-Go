@@ -5,12 +5,12 @@ func TrimAtoi(s string) int {
 	str := ""
 	isNegative := false
 	for index, char := range s {
+		if index > 0 && s[index-1] == '-' && len(str) == 0 {
+			isNegative = true
+		}
+
 		if isNumber(char) {
-			if index > 0 && s[index-1] == '-' && len(str) == 0 {
-				isNegative = true
-			} else {
-				str += string(char)
-			}
+			str += string(char)
 		}
 	}
 
