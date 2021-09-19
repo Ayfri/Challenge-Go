@@ -15,6 +15,10 @@ func main() {
 		return
 	}
 
+	if isOverflow(value) || isOverflow(other) {
+		return
+	}
+
 	switch operator {
 	case "+":
 		printInt(value + other)
@@ -44,6 +48,10 @@ func main() {
 	}
 
 	os.Stdout.WriteString("\n")
+}
+
+func isOverflow(value int) bool {
+	return value >= 1<<31 || value <= -(1<<31)
 }
 
 func printInt(nbr int) {
