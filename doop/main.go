@@ -34,6 +34,8 @@ func main() {
 	default:
 		return
 	}
+
+	os.Stdout.WriteString("\n")
 }
 
 func printInt(nbr int) {
