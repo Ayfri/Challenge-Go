@@ -1,28 +1,33 @@
 package main
 
+import (
+	"os"
+	"piscine"
+)
+
 func doop(value int, operator string, other int) {
 	switch operator {
 	case "+":
-		println(value + other)
+		piscine.PrintNbr(value + other)
 
 	case "-":
-		println(value - other)
+		piscine.PrintNbr(value - other)
 
 	case "*":
-		println(value * other)
+		piscine.PrintNbr(value * other)
 
 	case "/":
 		if value == 0 && other == value {
-			println("No division by 0")
+			os.Stdout.WriteString("No division by 0")
 		} else {
-			println(value / other)
+			piscine.PrintNbr(value / other)
 		}
 
 	case "%":
 		if value == 0 && other == value {
-			println("No modulo by 0")
+			os.Stdout.WriteString("No modulo by 0")
 		} else {
-			println(value % other)
+			piscine.PrintNbr(value % other)
 		}
 
 	default:
