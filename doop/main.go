@@ -22,14 +22,14 @@ func main() {
 		printInt(value * other)
 
 	case "/":
-		if value == 0 && other == value {
+		if value == 0 || other == 0 {
 			os.Stdout.WriteString("No division by 0")
 		} else {
 			printInt(value / other)
 		}
 
 	case "%":
-		if value == 0 && other == value {
+		if value == 0 || other == 0 {
 			os.Stdout.WriteString("No modulo by 0")
 		} else {
 			printInt(value % other)
