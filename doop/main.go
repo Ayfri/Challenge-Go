@@ -7,7 +7,7 @@ import (
 func main() {
 	value, operator, other := TrimAtoi(os.Args[1]), os.Args[2], TrimAtoi(os.Args[3])
 
-	if value == 0 && os.Args[1] != "0" || other == 0 && os.Args[3] != "0" {
+	if value == 0 && os.Args[1] != "0" || other == 0 && os.Args[3] != "0" || len(os.Args) < 4 {
 		return
 	}
 
