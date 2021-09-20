@@ -8,9 +8,13 @@ func Atoi(s string) int {
 	if len(s) == 0 {
 		return 0
 	}
-	
+
 	if s[0] == '-' {
 		isNegative = true
+		start++
+	}
+
+	if s[0] == '+' {
 		start++
 	}
 
