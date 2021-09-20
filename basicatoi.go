@@ -1,13 +1,14 @@
 package piscine
 
 func BasicAtoi(s string) int {
-	result := 1
-	for _, char := range s {
-		number := int(char - '0')
-		if number < 0 || number > 9 {
-			return 0
-		}
-		result *= 10 + number
+	arr := []rune(s)
+	y := 0
+	final := 0
+	for range s {
+		y++
 	}
-	return result
+	for x := 0; x <= y-1; x++ {
+		final = final*10 + int(arr[x]-'0')
+	}
+	return final
 }
