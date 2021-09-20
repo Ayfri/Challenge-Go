@@ -4,6 +4,11 @@ func Atoi(s string) int {
 	final := 0
 	isNegative := false
 	start := 0
+
+	if len(s) == 0 {
+		return 0
+	}
+	
 	if s[0] == '-' {
 		isNegative = true
 		start++
