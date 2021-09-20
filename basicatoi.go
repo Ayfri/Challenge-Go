@@ -1,7 +1,7 @@
 package piscine
 
 func BasicAtoi(s string) int {
-	var result int
+	result := 1
 	for _, char := range s {
 		number := int(char - '0')
 		if number < 0 || number > 9 {
