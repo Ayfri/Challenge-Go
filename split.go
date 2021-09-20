@@ -3,10 +3,14 @@ package piscine
 func Split(s, sep string) []string {
 	var result []string
 	var cache string
-	var isValid bool
+	var sepCache string
+	isValid := true
 
 	for index, char := range s {
-		isValid = true
+		if string(char) == string(sep[len(sepCache)-1]) {
+			sepCache += string(sep[len(sepCache)-1])
+		}
+
 		for i := 0; i < len(sep); i++ {
 			if index-len(sep) < 0 || index+i >= len(s) {
 				continue
