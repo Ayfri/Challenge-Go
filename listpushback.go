@@ -13,6 +13,6 @@ type List struct {
 func ListPushBack(l *List, data interface{}) {
 	*l.Tail, *l.Head = *l.Head, NodeL{
 		data,
-		nil,
+		l.Head,
 	}
 }
