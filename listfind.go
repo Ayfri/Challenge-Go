@@ -6,7 +6,7 @@ func CompStr(a, b interface{}) bool {
 
 func ListFind(l *List, ref interface{}, comp func(a, b interface{}) bool) *interface{} {
 	for iter := l.Head; iter != nil; iter = iter.Next {
-		if comp(iter, ref) {
+		if comp(&iter, ref) {
 			return &iter.Data
 		}
 	}
