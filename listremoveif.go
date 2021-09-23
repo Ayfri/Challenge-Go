@@ -9,6 +9,7 @@ func ListRemoveIf(l *List, data_ref interface{}) {
 			continue
 		}
 		ListPushBack(result, iter.Data)
+		iter = iter.Next
 	}
 	*l = *result
 }
