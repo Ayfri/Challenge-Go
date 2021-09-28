@@ -18,4 +18,5 @@ func main() {
 	for _, char := range programName[lastSlashIndex+1:] {
 		z01.PrintRune(char)
 	}
+	z01.PrintRune('\n')
 }
