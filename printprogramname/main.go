@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	lastSlashIndex := -1
+	lastSlashIndex := 0
 	programName := os.Args[0]
 	for index, char := range programName {
 		if char == '/' {
@@ -15,7 +15,7 @@ func main() {
 		}
 	}
 
-	for i := lastSlashIndex; i < len(programName); i++ {
+	for i := lastSlashIndex - 1; i < len(programName); i++ {
 		char := rune(programName[i])
 		z01.PrintRune(char)
 	}
