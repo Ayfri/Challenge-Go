@@ -34,7 +34,7 @@ func ConvertNbr(nbr int) string {
 			remainder = -remainder
 		}
 		char := rune(remainder) + rune('0')
-		str += string(char)
+		str = string(char) + str
 	}
 
 	if nbr == 0 {
