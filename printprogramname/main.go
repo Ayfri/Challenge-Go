@@ -7,7 +7,18 @@ import (
 )
 
 func main() {
-	PrintStr(os.Args[0])
+	lastSlashIndex := -1
+	programName := os.Args[0]
+	for index, char := range programName {
+		if char == '/' {
+			lastSlashIndex = index
+		}
+	}
+
+	for i := lastSlashIndex; i < len(programName); i++ {
+		char := rune(programName[i])
+		z01.PrintRune(char)
+	}
 }
 
 func PrintStr(s string) {
