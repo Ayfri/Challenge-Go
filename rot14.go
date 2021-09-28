@@ -6,7 +6,7 @@ func Rot14(s string) string {
 		if IsUpper(string(char)) {
 			if char+14 > 'Z' {
 				difference := 'Z' - char
-				char = 'A' + 15 - difference
+				char = 'A' + 13 - difference
 				result += string(char)
 			} else {
 				result += string(char + 14)
@@ -14,7 +14,7 @@ func Rot14(s string) string {
 		} else if IsLower(string(char)) {
 			if char+14 > 'z' {
 				difference := 'z' - char
-				char = 'a' + 15 - difference
+				char = 'a' + 13 - difference
 				result += string(char)
 			} else {
 				result += string(char + 14)
