@@ -20,5 +20,5 @@ func main() {
 	if err != nil {
 		return
 	}
-	fmt.Println(string(content))
+	fmt.Print(string(content))
 }
