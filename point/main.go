@@ -18,7 +18,7 @@ func main() {
 
 	setPoint(points)
 
-	result := "x = " + ConvertNbr(points.x) + "y = " + ConvertNbr(points.y) + "\n"
+	result := "x = " + ConvertNbr(points.x) + ", y = " + ConvertNbr(points.y) + "\n"
 	for _, char := range result {
 		z01.PrintRune(char)
 	}
