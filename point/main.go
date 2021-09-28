@@ -1,7 +1,6 @@
 package point
 
 import (
-	"fmt"
 	"github.com/01-edu/z01"
 )
 
@@ -19,7 +18,6 @@ func main() {
 
 	setPoint(points)
 
-	fmt.Printf("x = %d, y = %d\n", points.x, points.y)
 	result := "x = " + ConvertNbr(points.x) + "y = " + ConvertNbr(points.y) + "\n"
 	for _, char := range result {
 		z01.PrintRune(char)
