@@ -15,9 +15,7 @@ func main() {
 		}
 	}
 
-	z01.PrintRune('.')
-	for i := lastSlashIndex - 1; i < len(programName); i++ {
-		char := rune(programName[i])
+	for _, char := range programName[lastSlashIndex+1:] {
 		z01.PrintRune(char)
 	}
 }
