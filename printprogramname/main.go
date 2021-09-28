@@ -10,7 +10,7 @@ func main() {
 	lastSlashIndex := -1
 	programName := os.Args[0]
 	for index, char := range programName {
-		if char == '\\' {
+		if char == '/' {
 			lastSlashIndex = index
 		}
 	}
