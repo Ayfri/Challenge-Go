@@ -1,13 +1,14 @@
 package main
 
 import (
-	"github.com/01-edu/z01"
 	"os"
+
+	"github.com/01-edu/z01"
 )
 
 func main() {
 	args := os.Args[1:]
-	
+
 	SortWordArr(args)
 
 	for _, arg := range args {
