@@ -4,7 +4,7 @@ package piscine
 // multiply by three when odd & add one
 
 func CollatzCountdown(start int) int {
-	for i := 0; i <= start; i++ {
+	for i := 0; ; i++ {
 		if start == 1 {
 			return i
 		}
