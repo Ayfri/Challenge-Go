@@ -2,12 +2,13 @@ package piscine
 
 func Compact(ptr *[]string) int {
 	var result []string
-	var empty string
+	var count int
 	for _, element := range *ptr {
-		if element != empty {
+		if element != "" {
 			result = append(result, element)
+			count++
 		}
 	}
-	ptr = &result
+	*ptr = result[:count]
 	return len(result)
 }
