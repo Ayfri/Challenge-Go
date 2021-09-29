@@ -5,7 +5,7 @@ func Abort(a, b, c, d, e int) int {
 
 	medianNumber := len(arr) / 2
 
-	if len(arr)%2 == 0 {
+	if len(arr)%2 == 1 {
 		return arr[medianNumber]
 	}
 
